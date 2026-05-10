@@ -167,7 +167,7 @@
   .stop:nth-child(odd) .stop-pin { background: var(--red); }
   .stop:nth-child(even) .stop-pin { background: var(--coral); }
   .stop[data-stop="3"] .stop-pin { background: var(--sun); }
-  .stop[data-stop="7"] .stop-pin { background: var(--sun); }
+  .stop[data-stop="10"] .stop-pin { background: var(--sun); }
 
   .stop-pin svg {
     width: 38px;
@@ -175,7 +175,7 @@
     fill: var(--cream);
   }
   .stop[data-stop="3"] .stop-pin svg,
-  .stop[data-stop="7"] .stop-pin svg {
+  .stop[data-stop="10"] .stop-pin svg {
     fill: var(--ink);
   }
 
@@ -455,6 +455,9 @@
   .stop:nth-child(7) .stop-pin { animation-delay: -1.8s; }
   .stop:nth-child(8) .stop-pin { animation-delay: -2.1s; }
   .stop:nth-child(9) .stop-pin { animation-delay: -2.4s; }
+  .stop:nth-child(10) .stop-pin { animation-delay: -2.7s; }
+  .stop:nth-child(11) .stop-pin { animation-delay: -3.0s; }
+  .stop:nth-child(12) .stop-pin { animation-delay: -3.3s; }
 
   .you-are-here {
     position: absolute;
@@ -504,14 +507,17 @@
   <svg class="road-svg" viewBox="0 0 1600 900" preserveAspectRatio="none">
     <!-- The road -->
     <path id="road" d="M 60 290
-                       C 220 290, 80 80, 240 80
-                       C 400 80, 240 440, 400 440
-                       C 560 440, 400 60, 580 60
-                       C 750 60, 580 480, 740 480
-                       C 900 480, 740 80, 900 80
-                       C 1060 80, 900 460, 1060 460
-                       C 1220 460, 1060 100, 1220 100
-                       C 1380 100, 1340 240, 1480 240
+                       C 180 290, 70 80, 200 80
+                       C 330 80, 200 440, 330 440
+                       C 460 440, 330 80, 460 80
+                       C 590 80, 460 440, 590 440
+                       C 720 440, 590 80, 720 80
+                       C 850 80, 720 440, 850 440
+                       C 980 440, 850 80, 980 80
+                       C 1110 80, 980 440, 1110 440
+                       C 1240 440, 1110 80, 1240 80
+                       C 1370 80, 1240 440, 1370 440
+                       C 1490 440, 1430 240, 1500 240
                        L 1560 240"
           fill="none"
           stroke="#2D1B0F"
@@ -519,14 +525,17 @@
           stroke-linecap="round" />
     <!-- Dashed center line -->
     <path d="M 60 290
-             C 220 290, 80 80, 240 80
-             C 400 80, 240 440, 400 440
-             C 560 440, 400 60, 580 60
-             C 750 60, 580 480, 740 480
-             C 900 480, 740 80, 900 80
-             C 1060 80, 900 460, 1060 460
-             C 1220 460, 1060 100, 1220 100
-             C 1380 100, 1340 240, 1480 240
+             C 180 290, 70 80, 200 80
+             C 330 80, 200 440, 330 440
+             C 460 440, 330 80, 460 80
+             C 590 80, 460 440, 590 440
+             C 720 440, 590 80, 720 80
+             C 850 80, 720 440, 850 440
+             C 980 440, 850 80, 980 80
+             C 1110 80, 980 440, 1110 440
+             C 1240 440, 1110 80, 1240 80
+             C 1370 80, 1240 440, 1370 440
+             C 1490 440, 1430 240, 1500 240
              L 1560 240"
           fill="none"
           stroke="#FFF4D6"
@@ -558,7 +567,7 @@
 
   <div class="stops-mobile">
     <!-- Stop 1: Early Life -->
-    <div class="stop" data-stop="1" style="left: 5%; top: 290px;">
+    <div class="stop" data-stop="1" style="left: 4.375%; top: 290px;">
       <div class="stop-pin">
         <span class="stop-num">1</span>
         <svg viewBox="0 0 24 24"><path d="M12 2 L2 12 h3 v8 h6 v-6 h2 v6 h6 v-8 h3 Z"/></svg>
@@ -570,7 +579,7 @@
     </div>
 
     <!-- Stop 2: Education -->
-    <div class="stop" data-stop="2" style="left: 15%; top: 80px;">
+    <div class="stop" data-stop="2" style="left: 12.5%; top: 80px;">
       <div class="stop-pin">
         <span class="stop-num">2</span>
         <svg viewBox="0 0 24 24"><path d="M12 3 L2 9 l10 6 l10-6 z M4 11 v6 l8 4 l8-4 v-6"/></svg>
@@ -582,7 +591,7 @@
     </div>
 
     <!-- Stop 3: Math Teaching -->
-    <div class="stop" data-stop="3" style="left: 25%; top: 440px;">
+    <div class="stop" data-stop="3" style="left: 20.625%; top: 440px;">
       <div class="stop-pin">
         <span class="stop-num">3</span>
         <svg viewBox="0 0 24 24"><path d="M3 4 h18 v14 H3 z M7 8 h2 v2 H7 z M11 8 h2 v2 h-2 z M15 8 h2 v2 h-2 z M7 12 h2 v2 H7 z M11 12 h2 v2 h-2 z M15 12 h2 v2 h-2 z"/></svg>
@@ -593,10 +602,22 @@
       </div>
     </div>
 
-    <!-- Stop 4: Howard University Pivot -->
-    <div class="stop" data-stop="4" style="left: 36.25%; top: 60px;">
+    <!-- Stop 4: IUN (Career Beginnings + Supplemental Instruction) -->
+    <div class="stop" data-stop="4" style="left: 28.75%; top: 80px;">
       <div class="stop-pin">
         <span class="stop-num">4</span>
+        <svg viewBox="0 0 24 24"><path d="M9 4 a2.5 2.5 0 1 0 0 5 a2.5 2.5 0 0 0 0-5 z M16 5 a2 2 0 1 0 0 4 a2 2 0 0 0 0-4 z M9 11 c-2.7 0-5 1.3-5 3 v3 h10 v-3 c0-1.7-2.3-3-5-3 z M16 11 c-0.7 0-1.4 0.1-2 0.4 c0.6 0.7 1 1.6 1 2.6 v3 h6 v-2.5 c0-1.5-2-3.5-5-3.5 z"/></svg>
+      </div>
+      <div class="stop-label-wrap">
+        <div class="stop-label">IU Northwest</div>
+        <div class="stop-tagline">Career Beginnings · First SI Coordinator</div>
+      </div>
+    </div>
+
+    <!-- Stop 5: Howard University Pivot -->
+    <div class="stop" data-stop="5" style="left: 36.875%; top: 440px;">
+      <div class="stop-pin">
+        <span class="stop-num">5</span>
         <svg viewBox="0 0 24 24"><path d="M3 17 l6-6 4 4 8-8 v6 h-2 v-2.6 l-6 6 -4-4 -6 6 z M3 19 h18 v2 H3 z"/></svg>
       </div>
       <div class="stop-label-wrap">
@@ -605,10 +626,10 @@
       </div>
     </div>
 
-    <!-- Stop 5: Hip Hop IS My Passport (MSU + Fulbright + Australia) -->
-    <div class="stop" data-stop="5" style="left: 46.25%; top: 480px;">
+    <!-- Stop 6: Hip Hop IS My Passport (MSU + Fulbright + Australia) -->
+    <div class="stop" data-stop="6" style="left: 45%; top: 80px;">
       <div class="stop-pin">
-        <span class="stop-num">5</span>
+        <span class="stop-num">6</span>
         <svg viewBox="0 0 24 24"><path d="M21 16 v-2 l-8-5 V3.5 a1.5 1.5 0 0 0-3 0 V9 l-8 5 v2 l8-2.5 V19 l-2 1.5 V22 l3.5-1 L15 22 v-1.5 L13 19 v-5.5 l8 2.5 z"/></svg>
       </div>
       <div class="stop-label-wrap">
@@ -617,10 +638,22 @@
       </div>
     </div>
 
-    <!-- Stop 6: NEW - Air University / US Air Force -->
-    <div class="stop" data-stop="6" style="left: 56.25%; top: 80px;">
+    <!-- Stop 7: NEW - Faculty Years (Purdue + Concordia) -->
+    <div class="stop" data-stop="7" style="left: 53.125%; top: 440px;">
       <div class="stop-pin">
-        <span class="stop-num">6</span>
+        <span class="stop-num">7</span>
+        <svg viewBox="0 0 24 24"><path d="M4 6 h7 v12 H4 z M13 6 h7 v12 h-7 z M6 8 h3 v2 H6 z M6 11 h3 v2 H6 z M6 14 h3 v2 H6 z M15 8 h3 v2 h-3 z M15 11 h3 v2 h-3 z M15 14 h3 v2 h-3 z M2 19 h20 v2 H2 z M2 4 h20 v2 H2 z"/></svg>
+      </div>
+      <div class="stop-label-wrap">
+        <div class="stop-label">Faculty Years</div>
+        <div class="stop-tagline">Purdue · Concordia</div>
+      </div>
+    </div>
+
+    <!-- Stop 8: Air University / US Air Force -->
+    <div class="stop" data-stop="8" style="left: 61.25%; top: 80px;">
+      <div class="stop-pin">
+        <span class="stop-num">8</span>
         <svg viewBox="0 0 24 24"><path d="M12 3 c-0.6 0-1 0.4-1 1 v4.5 L3 12 v2 l8-1.5 V18 L9 19.5 V21 l3-0.7 l3 0.7 v-1.5 L13 18 v-5.5 L21 14 v-2 l-8-3.5 V4 c0-0.6-0.4-1-1-1 z"/></svg>
       </div>
       <div class="stop-label-wrap">
@@ -629,10 +662,22 @@
       </div>
     </div>
 
-    <!-- Stop 7: IU / Luddy (current) -->
-    <div class="stop" data-stop="7" style="left: 66.25%; top: 460px;">
+    <!-- Stop 9: NEW - Magnificent + Quills (Marriage + Rolling Circles) -->
+    <div class="stop" data-stop="9" style="left: 69.375%; top: 440px;">
       <div class="stop-pin">
-        <span class="stop-num">7</span>
+        <span class="stop-num">9</span>
+        <svg viewBox="0 0 24 24"><path d="M12 21 L2 12 a5 5 0 0 1 7-7 l3 3 l3-3 a5 5 0 0 1 7 7 z"/></svg>
+      </div>
+      <div class="stop-label-wrap">
+        <div class="stop-label">Magnificent + Quills</div>
+        <div class="stop-tagline">Married Matthew · Chill & Quill</div>
+      </div>
+    </div>
+
+    <!-- Stop 10: IU / Luddy (current) -->
+    <div class="stop" data-stop="10" style="left: 77.5%; top: 80px;">
+      <div class="stop-pin">
+        <span class="stop-num">10</span>
         <svg viewBox="0 0 24 24"><path d="M12 2 L2 8 h20 z M4 10 v9 h3 v-9 z M10 10 v9 h4 v-9 z M17 10 v9 h3 v-9 z M2 21 h20 v2 H2 z"/></svg>
       </div>
       <div class="stop-label-wrap">
@@ -642,10 +687,10 @@
       <div class="you-are-here" style="left: 50%; top: -38px;">You are here</div>
     </div>
 
-    <!-- Stop 8: Spilled and Studied -->
-    <div class="stop" data-stop="8" style="left: 76.25%; top: 100px;">
+    <!-- Stop 11: Spilled and Studied -->
+    <div class="stop" data-stop="11" style="left: 85.625%; top: 440px;">
       <div class="stop-pin">
-        <span class="stop-num">8</span>
+        <span class="stop-num">11</span>
         <svg viewBox="0 0 24 24"><path d="M5 3 h11 l4 4 v14 H5 z M14 3 v5 h5"/></svg>
       </div>
       <div class="stop-label-wrap">
@@ -654,10 +699,10 @@
       </div>
     </div>
 
-    <!-- Stop 9: What's Next -->
-    <div class="stop" data-stop="9" style="left: 92.5%; top: 240px;">
+    <!-- Stop 12: What's Next -->
+    <div class="stop" data-stop="12" style="left: 93.75%; top: 240px;">
       <div class="stop-pin">
-        <span class="stop-num">9</span>
+        <span class="stop-num">12</span>
         <svg viewBox="0 0 24 24"><path d="M12 2 L15 9 L22 9 L16.5 13.5 L18.5 21 L12 17 L5.5 21 L7.5 13.5 L2 9 L9 9 Z"/></svg>
       </div>
       <div class="stop-label-wrap">
@@ -737,11 +782,25 @@
       `
     },
     4: {
-      tag: "Stop 04 · Pivot",
+      tag: "Stop 04 · IUN",
+      title: "Indiana University Northwest",
+      when: "Career Beginnings · First Supplemental Instruction Coordinator",
+      body: `
+        <p>Back in Gary. The classroom had taught me what I didn't know about teaching. IUN gave me the next layer: how learning happens outside the classroom, for the people the system wasn't built for.</p>
+        <ul>
+          <li>Worked for Career Beginnings — a workforce development program for young adults</li>
+          <li>The first Supplemental Instruction Coordinator at IUN</li>
+          <li>Built academic support structures from scratch for students the system kept missing</li>
+          <li>Started seeing teaching as a system problem, not a classroom problem</li>
+        </ul>
+      `
+    },
+    5: {
+      tag: "Stop 05 · Pivot",
       title: "Howard University",
       when: "Coordinator of Web Design and Web-Based Instruction",
       body: `
-        <p>The classroom taught me the question. Howard taught me the medium. As Coordinator of Web Design and Web-Based Instruction, I started building learning experiences for the screen — and figuring out what changes (and what doesn't) when the room is virtual.</p>
+        <p>The classroom taught me the question. IUN taught me how to scaffold around it. Howard taught me the medium. As Coordinator of Web Design and Web-Based Instruction, I started building learning experiences for the screen — and figuring out what changes (and what doesn't) when the room is virtual.</p>
         <ul>
           <li>Coordinator of Web Design and Web-Based Instruction at Howard University</li>
           <li>First serious move into instructional design and learning technology</li>
@@ -750,8 +809,8 @@
         </ul>
       `
     },
-    5: {
-      tag: "Stop 05 · Sydney",
+    6: {
+      tag: "Stop 06 · Sydney",
       title: "Hip Hop IS My Passport",
       when: "MSU doctoral work · Fulbright Australia",
       body: `
@@ -766,12 +825,26 @@
         <p style="margin-top:14px; font-style: italic; color: var(--red);">Hip hop went global before I did. The Fulbright let me catch up.</p>
       `
     },
-    6: {
-      tag: "Stop 06 · Air Force",
+    7: {
+      tag: "Stop 07 · Faculty",
+      title: "Faculty Years",
+      when: "Purdue · Concordia",
+      body: `
+        <p>After Sydney, two academic homes back-to-back. At Purdue I worked as Senior Educational Technologist, translating research into the tools faculty actually use. At Concordia I taught it: Associate Professor of Differentiated Instruction, where the course content and the teaching method had to be the same thing.</p>
+        <ul>
+          <li>Senior Educational Technologist at Purdue University</li>
+          <li>Associate Professor of Differentiated Instruction at Concordia University</li>
+          <li>Built tools for faculty AND taught faculty, two sides of the same problem</li>
+          <li>Differentiated instruction as both subject matter and method</li>
+        </ul>
+      `
+    },
+    8: {
+      tag: "Stop 08 · Air Force",
       title: "Air University",
       when: "US Air Force · Learning Architect for Online Courses",
       body: `
-        <p>From Sydney to the Air Force. Different uniform, same job: making learning work for adults who don't have time for nonsense. As Learning Architect at Air University, I designed online courses for the people whose classrooms are bases, ships, and laptops on three time zones.</p>
+        <p>From the academic side to the Air Force. Different uniform, same job: making learning work for adults who don't have time for nonsense. As Learning Architect at Air University, I designed online courses for the people whose classrooms are bases, ships, and laptops on three time zones.</p>
         <ul>
           <li>Learning Architect for Online Courses at Air University</li>
           <li>Member of the VR/AR Educational Committee</li>
@@ -781,8 +854,22 @@
         </ul>
       `
     },
-    7: {
-      tag: "Stop 07 · IU",
+    9: {
+      tag: "Stop 09 · Personal era",
+      title: "Magnificent + Quills",
+      when: "Married Matthew · Founded Chill & Quill",
+      body: `
+        <p>Some chapters happen between the resume lines. Here are two of the best ones. I married the Magnificent One known as Matthew. I started what began as All My Quills and grew into Chill & Quill, the creative practice where the writing, the coaching, and the consulting live.</p>
+        <ul>
+          <li>Married Matthew, the Magnificent One</li>
+          <li>Founded All My Quills, which became Chill & Quill</li>
+          <li>The creative practice where my writing, coaching, and consulting work live</li>
+          <li>The room I built for myself when no one else was building it</li>
+        </ul>
+      `
+    },
+    10: {
+      tag: "Stop 10 · IU",
       title: "Luddy School, Indiana University",
       when: "Current",
       body: `
@@ -795,8 +882,8 @@
         </ul>
       `
     },
-    8: {
-      tag: "Stop 08 · Public voice",
+    11: {
+      tag: "Stop 11 · Public voice",
       title: "Spilled & Studied",
       when: "Ongoing",
       body: `
@@ -809,8 +896,8 @@
         </ul>
       `
     },
-    9: {
-      tag: "Stop 09 · The horizon",
+    12: {
+      tag: "Stop 12 · The horizon",
       title: "What's Next",
       when: "2026 and forward",
       body: `
