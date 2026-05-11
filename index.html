@@ -147,7 +147,9 @@
     z-index: 5;
     text-align: center;
     width: 160px;
+    pointer-events: none;
   }
+  .stop-pin, .stop-label-wrap { pointer-events: auto; }
 
   .stop-pin {
     width: 78px;
@@ -441,23 +443,12 @@
     to { stroke-dashoffset: -32; }
   }
 
-  /* Pulse on pins */
+  /* Pulse only on the current "you are here" stop, slower and gentler */
   @keyframes pulse {
-    0%, 100% { box-shadow: 4px 4px 0 var(--ink), 0 0 0 5px var(--ink) inset, 0 0 0 0 rgba(230, 57, 70, 0.5); }
-    50% { box-shadow: 4px 4px 0 var(--ink), 0 0 0 5px var(--ink) inset, 0 0 0 18px rgba(230, 57, 70, 0); }
+    0%, 100% { box-shadow: 4px 4px 0 var(--ink), 0 0 0 5px var(--ink) inset, 0 0 0 0 rgba(230, 57, 70, 0.45); }
+    50% { box-shadow: 4px 4px 0 var(--ink), 0 0 0 5px var(--ink) inset, 0 0 0 14px rgba(230, 57, 70, 0); }
   }
-  .stop-pin { animation: pulse 2.4s ease-in-out infinite; }
-  .stop:nth-child(2) .stop-pin { animation-delay: -0.3s; }
-  .stop:nth-child(3) .stop-pin { animation-delay: -0.6s; }
-  .stop:nth-child(4) .stop-pin { animation-delay: -0.9s; }
-  .stop:nth-child(5) .stop-pin { animation-delay: -1.2s; }
-  .stop:nth-child(6) .stop-pin { animation-delay: -1.5s; }
-  .stop:nth-child(7) .stop-pin { animation-delay: -1.8s; }
-  .stop:nth-child(8) .stop-pin { animation-delay: -2.1s; }
-  .stop:nth-child(9) .stop-pin { animation-delay: -2.4s; }
-  .stop:nth-child(10) .stop-pin { animation-delay: -2.7s; }
-  .stop:nth-child(11) .stop-pin { animation-delay: -3.0s; }
-  .stop:nth-child(12) .stop-pin { animation-delay: -3.3s; }
+  .stop[data-stop="10"] .stop-pin { animation: pulse 3.6s ease-in-out infinite; }
 
   .you-are-here {
     position: absolute;
